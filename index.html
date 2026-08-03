@@ -547,7 +547,7 @@
             };
 
             card.addEventListener('mouseenter', () => {
-                card.style.transition = 'transform 0.1s ease-out';
+                card.style.transition = 'transform 0.1s ease-out, border-color 0.5s ease';
                 card.style.willChange = 'transform';
             });
 
@@ -564,7 +564,7 @@
                     frameId = null;
                 }
 
-                card.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                card.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.5s ease';
                 card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
                 card.style.willChange = 'auto';
             });
