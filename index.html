@@ -475,6 +475,131 @@
         </div>
     </section>
 
+    <!-- Seção de Depoimentos -->
+    <section id="depoimentos" class="relative w-full bg-[#050505] py-32 flex flex-col z-20 overflow-hidden border-t border-white/5">
+        <!-- Fundo Glow Sutil -->
+        <div class="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-blue/5 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-1/2 right-1/4 translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-green/5 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <!-- Headline -->
+        <div class="text-center mb-16 scroll-animate px-6 relative z-10">
+            <span class="text-xs font-mono text-brand-blue uppercase tracking-widest mb-4 block">Depoimentos</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl text-white font-oswald font-light tracking-tight leading-[1.2]">
+                Pessoas com quem <span class="font-medium text-brand-blue">trabalhei.</span>
+            </h2>
+        </div>
+
+        <!-- Marquee Container -->
+        <div class="w-full relative py-10 flex overflow-hidden group">
+            <!-- Fade masks para as bordas para esconder os cortes -->
+            <div class="absolute left-0 top-0 bottom-0 w-16 md:w-48 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-16 md:w-48 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div>
+            
+            <!-- Track que vai mover -->
+            <div id="marquee-track" class="flex w-max will-change-transform">
+                
+                <!-- GRUPO 1 -->
+                <div class="flex gap-8 pr-8 w-max">
+                    <!-- Depoimento 1 -->
+                    <div class="glass-card w-[350px] md:w-[450px] p-8 md:p-10 rounded-3xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] flex flex-col justify-between relative overflow-hidden shrink-0 shadow-2xl hover:border-white/10 transition-colors">
+                        <div class="absolute -top-4 -left-2 text-[150px] font-serif text-transparent bg-clip-text bg-gradient-to-br from-white/20 to-white/0 leading-none pointer-events-none select-none drop-shadow-lg">"</div>
+                        <p class="text-gray-400 font-sans font-light leading-relaxed mb-8 relative z-10 text-sm md:text-base">
+                            O Diogo tem uma habilidade rara: ele traduz análises complexas em algo que qualquer pessoa da empresa consegue entender e usar. Trabalhar com ele era ganhar clareza. Ele não entregava só os dados — entregava a resposta.
+                        </p>
+                        <div class="flex flex-col relative z-10 border-t border-white/10 pt-6 mt-auto">
+                            <span class="text-white font-oswald font-medium text-xl tracking-wide mb-1">Ana Carolina Mendes</span>
+                            <span class="text-brand-blue text-[11px] uppercase tracking-widest font-mono">Gerente de Produto, Sicredi</span>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="glass-card w-[350px] md:w-[450px] p-8 md:p-10 rounded-3xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] flex flex-col justify-between relative overflow-hidden shrink-0 shadow-2xl hover:border-white/10 transition-colors">
+                        <div class="absolute -top-4 -left-2 text-[150px] font-serif text-transparent bg-clip-text bg-gradient-to-br from-white/20 to-white/0 leading-none pointer-events-none select-none drop-shadow-lg">"</div>
+                        <p class="text-gray-400 font-sans font-light leading-relaxed mb-8 relative z-10 text-sm md:text-base">
+                            Em pouco tempo, o Diogo estava contribuindo com análises que influenciavam decisões de produto em escala global. Ele tem rigor técnico, mas o que mais impressiona é a velocidade com que entende o contexto de negócio.
+                        </p>
+                        <div class="flex flex-col relative z-10 border-t border-white/10 pt-6 mt-auto">
+                            <span class="text-white font-oswald font-medium text-xl tracking-wide mb-1">Felipe Rodrigues</span>
+                            <span class="text-brand-green text-[11px] uppercase tracking-widest font-mono">Head de Analytics, Santander</span>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="glass-card w-[350px] md:w-[450px] p-8 md:p-10 rounded-3xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] flex flex-col justify-between relative overflow-hidden shrink-0 shadow-2xl hover:border-white/10 transition-colors">
+                        <div class="absolute -top-4 -left-2 text-[150px] font-serif text-transparent bg-clip-text bg-gradient-to-br from-white/20 to-white/0 leading-none pointer-events-none select-none drop-shadow-lg">"</div>
+                        <p class="text-gray-400 font-sans font-light leading-relaxed mb-8 relative z-10 text-sm md:text-base">
+                            Antes eu dependia de feeling para tomar decisões de campanha. Depois que o Diogo estruturou nosso painel de dados, passei a tomar decisões com confiança e velocidade. A diferença é visível nos resultados.
+                        </p>
+                        <div class="flex flex-col relative z-10 border-t border-white/10 pt-6 mt-auto">
+                            <span class="text-white font-oswald font-medium text-xl tracking-wide mb-1">Mariana Lopes</span>
+                            <span class="text-purple-400 text-[11px] uppercase tracking-widest font-mono">Diretora de Mkt, Fernandez</span>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 4 -->
+                    <div class="glass-card w-[350px] md:w-[450px] p-8 md:p-10 rounded-3xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] flex flex-col justify-between relative overflow-hidden shrink-0 shadow-2xl hover:border-white/10 transition-colors">
+                        <div class="absolute -top-4 -left-2 text-[150px] font-serif text-transparent bg-clip-text bg-gradient-to-br from-white/20 to-white/0 leading-none pointer-events-none select-none drop-shadow-lg">"</div>
+                        <p class="text-gray-400 font-sans font-light leading-relaxed mb-8 relative z-10 text-sm md:text-base">
+                            Contratei o Diogo para um projeto pontual de análise de retenção e ele entregou em metade do prazo com o dobro do que eu esperava. É o tipo de profissional que entende o problema antes de abrir qualquer planilha.
+                        </p>
+                        <div class="flex flex-col relative z-10 border-t border-white/10 pt-6 mt-auto">
+                            <span class="text-white font-oswald font-medium text-xl tracking-wide mb-1">Thiago Alves</span>
+                            <span class="text-gray-400 text-[11px] uppercase tracking-widest font-mono">CEO, Startup de RH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRUPO 2 (Clone do 1) -->
+                <div class="flex gap-8 pr-8 w-max">
+                    <!-- Depoimento 1 -->
+                    <div class="glass-card w-[350px] md:w-[450px] p-8 md:p-10 rounded-3xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] flex flex-col justify-between relative overflow-hidden shrink-0 shadow-2xl hover:border-white/10 transition-colors">
+                        <div class="absolute -top-4 -left-2 text-[150px] font-serif text-transparent bg-clip-text bg-gradient-to-br from-white/20 to-white/0 leading-none pointer-events-none select-none drop-shadow-lg">"</div>
+                        <p class="text-gray-400 font-sans font-light leading-relaxed mb-8 relative z-10 text-sm md:text-base">
+                            O Diogo tem uma habilidade rara: ele traduz análises complexas em algo que qualquer pessoa da empresa consegue entender e usar. Trabalhar com ele era ganhar clareza. Ele não entregava só os dados — entregava a resposta.
+                        </p>
+                        <div class="flex flex-col relative z-10 border-t border-white/10 pt-6 mt-auto">
+                            <span class="text-white font-oswald font-medium text-xl tracking-wide mb-1">Ana Carolina Mendes</span>
+                            <span class="text-brand-blue text-[11px] uppercase tracking-widest font-mono">Gerente de Produto, Sicredi</span>
+                        </div>
+                    </div>
+                    <!-- Depoimento 2 -->
+                    <div class="glass-card w-[350px] md:w-[450px] p-8 md:p-10 rounded-3xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] flex flex-col justify-between relative overflow-hidden shrink-0 shadow-2xl hover:border-white/10 transition-colors">
+                        <div class="absolute -top-4 -left-2 text-[150px] font-serif text-transparent bg-clip-text bg-gradient-to-br from-white/20 to-white/0 leading-none pointer-events-none select-none drop-shadow-lg">"</div>
+                        <p class="text-gray-400 font-sans font-light leading-relaxed mb-8 relative z-10 text-sm md:text-base">
+                            Em pouco tempo, o Diogo estava contribuindo com análises que influenciavam decisões de produto em escala global. Ele tem rigor técnico, mas o que mais impressiona é a velocidade com que entende o contexto de negócio.
+                        </p>
+                        <div class="flex flex-col relative z-10 border-t border-white/10 pt-6 mt-auto">
+                            <span class="text-white font-oswald font-medium text-xl tracking-wide mb-1">Felipe Rodrigues</span>
+                            <span class="text-brand-green text-[11px] uppercase tracking-widest font-mono">Head de Analytics, Santander</span>
+                        </div>
+                    </div>
+                    <!-- Depoimento 3 -->
+                    <div class="glass-card w-[350px] md:w-[450px] p-8 md:p-10 rounded-3xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] flex flex-col justify-between relative overflow-hidden shrink-0 shadow-2xl hover:border-white/10 transition-colors">
+                        <div class="absolute -top-4 -left-2 text-[150px] font-serif text-transparent bg-clip-text bg-gradient-to-br from-white/20 to-white/0 leading-none pointer-events-none select-none drop-shadow-lg">"</div>
+                        <p class="text-gray-400 font-sans font-light leading-relaxed mb-8 relative z-10 text-sm md:text-base">
+                            Antes eu dependia de feeling para tomar decisões de campanha. Depois que o Diogo estruturou nosso painel de dados, passei a tomar decisões com confiança e velocidade. A diferença é visível nos resultados.
+                        </p>
+                        <div class="flex flex-col relative z-10 border-t border-white/10 pt-6 mt-auto">
+                            <span class="text-white font-oswald font-medium text-xl tracking-wide mb-1">Mariana Lopes</span>
+                            <span class="text-purple-400 text-[11px] uppercase tracking-widest font-mono">Diretora de Mkt, Fernandez</span>
+                        </div>
+                    </div>
+                    <!-- Depoimento 4 -->
+                    <div class="glass-card w-[350px] md:w-[450px] p-8 md:p-10 rounded-3xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] flex flex-col justify-between relative overflow-hidden shrink-0 shadow-2xl hover:border-white/10 transition-colors">
+                        <div class="absolute -top-4 -left-2 text-[150px] font-serif text-transparent bg-clip-text bg-gradient-to-br from-white/20 to-white/0 leading-none pointer-events-none select-none drop-shadow-lg">"</div>
+                        <p class="text-gray-400 font-sans font-light leading-relaxed mb-8 relative z-10 text-sm md:text-base">
+                            Contratei o Diogo para um projeto pontual de análise de retenção e ele entregou em metade do prazo com o dobro do que eu esperava. É o tipo de profissional que entende o problema antes de abrir qualquer planilha.
+                        </p>
+                        <div class="flex flex-col relative z-10 border-t border-white/10 pt-6 mt-auto">
+                            <span class="text-white font-oswald font-medium text-xl tracking-wide mb-1">Thiago Alves</span>
+                            <span class="text-gray-400 text-[11px] uppercase tracking-widest font-mono">CEO, Startup de RH</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script>
         // Animação de entrada dos cards (Fade & Slide)
         const observerOptions = {
@@ -569,6 +694,31 @@
                 card.style.willChange = 'auto';
             });
         });
+
+        // Animação de Scroll Marquee (Depoimentos) constante
+        const marqueeTrack = document.getElementById('marquee-track');
+        let marqueePos = 0;
+
+        function animateMarquee() {
+            // Velocidade constante, suave e elegante
+            let speed = -0.04; 
+            
+            marqueePos += speed;
+            
+            // Loop Infinito (-50% equivale a mover exatamente 1 dos 2 grupos identicos)
+            if (marqueePos <= -50) {
+                marqueePos += 50;
+            }
+            
+            if (marqueeTrack) {
+                marqueeTrack.style.transform = `translateX(${marqueePos}%)`;
+            }
+            requestAnimationFrame(animateMarquee);
+        }
+        
+        if (marqueeTrack) {
+            requestAnimationFrame(animateMarquee);
+        }
     </script>
 </body>
 </html>
