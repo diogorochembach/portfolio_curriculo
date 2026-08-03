@@ -57,6 +57,23 @@
         .delay-300 { animation-delay: 300ms; }
         .delay-500 { animation-delay: 500ms; }
         
+        .glass-card {
+            background: rgba(10, 10, 12, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-animate.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
         [style*="--border-gradient"]::before {
             content: "";
             position: absolute;
@@ -238,5 +255,131 @@
         </div>
     </main>
 
+    <!-- Seção de Trajetória -->
+    <section id="trajetoria" class="relative w-full bg-[#050505] py-32 px-6 flex flex-col items-center z-20 border-t border-white/5">
+        <div class="max-w-5xl w-full mx-auto relative z-10">
+            <!-- Headline -->
+            <div class="text-center mb-24 scroll-animate">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl text-white font-oswald font-light tracking-tight leading-[1.2]">
+                    De números a estratégia:<br/>
+                    <span class="text-blue-500">uma trajetória construída com grandes empresas.</span>
+                </h2>
+            </div>
+            <!-- Timeline Container -->
+            <div id="timeline-container" class="relative w-full pb-10">
+                <!-- Linha de fundo (Track) -->
+                <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2"></div>
+                <!-- Linha de Progresso (Fill) -->
+                <div id="timeline-progress" class="absolute left-6 md:left-1/2 top-0 w-[2px] bg-blue-500 -translate-x-1/2 shadow-[0_0_15px_rgba(59,130,246,0.8)] transition-all duration-150 ease-out" style="height: 0%;"></div>
+
+                <!-- Item 1 -->
+                <div class="relative flex flex-col md:flex-row justify-between items-center w-full mb-16 group scroll-animate">
+                    <div class="w-full md:w-[45%] order-2 md:order-1 pl-16 md:pl-0 md:pr-12 text-left md:text-right">
+                        <div class="glass-card p-8 rounded-2xl border border-white/5 group-hover:border-white/20 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/10 relative">
+                            <div class="hidden md:block absolute top-1/2 -right-2 w-4 h-4 bg-[#0A0A0C] border-t border-r border-white/5 rotate-45 -translate-y-1/2 group-hover:border-white/20 transition-colors"></div>
+                            <h3 class="text-2xl font-semibold text-white tracking-tight font-oswald mb-3">Banco BV</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed font-sans font-light">Visitas diárias a Revendas de Veículos Multimarcas e Concessionárias, prospectando negócios, auxiliando no processo de financiamento de veículos leves, motos e pesados. Substituição de garantia e Transferência de dívidas para clientes. Formalização de contratos e demais processos que envolvam a área administrativa e comercial.</p>
+                        </div>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 top-8 md:top-1/2 md:-translate-y-1/2 flex items-center justify-center w-14 h-14 rounded-full bg-[#050505] border-2 border-white/10 z-10 group-hover:border-blue-500 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-500">
+                        <span class="text-xs font-mono text-blue-400 font-bold group-hover:scale-110 transition-transform">2009</span>
+                    </div>
+                    <div class="w-full md:w-[45%] order-3 hidden md:block"></div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="relative flex flex-col md:flex-row justify-between items-center w-full mb-16 group scroll-animate">
+                    <div class="w-full md:w-[45%] order-1 hidden md:block"></div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 top-8 md:top-1/2 md:-translate-y-1/2 flex items-center justify-center w-14 h-14 rounded-full bg-[#050505] border-2 border-white/10 z-10 group-hover:border-blue-500 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-500">
+                        <span class="text-xs font-mono text-blue-400 font-bold group-hover:scale-110 transition-transform">2011</span>
+                    </div>
+                    <div class="w-full md:w-[45%] order-2 pl-16 md:pl-12 text-left">
+                        <div class="glass-card p-8 rounded-2xl border border-white/5 group-hover:border-white/20 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/10 relative">
+                            <div class="hidden md:block absolute top-1/2 -left-2 w-4 h-4 bg-[#0A0A0C] border-b border-l border-white/5 rotate-45 -translate-y-1/2 group-hover:border-white/20 transition-colors"></div>
+                            <h3 class="text-2xl font-semibold text-white tracking-tight font-oswald mb-3">Banco Santander</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed font-sans font-light">Atendimento presencial no cliente, buscando a melhor opção de financiamento. Jornada de compra do cliente. Prospecção de clientes - Pessoas Física e Jurídica, venda de seguros, abertura de contas corrente, cobrança de inadimplentes e promoção de feirões de veículos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative flex flex-col md:flex-row justify-between items-center w-full mb-16 group scroll-animate">
+                    <div class="w-full md:w-[45%] order-2 md:order-1 pl-16 md:pl-0 md:pr-12 text-left md:text-right">
+                        <div class="glass-card p-8 rounded-2xl border border-white/5 group-hover:border-white/20 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/10 relative">
+                            <div class="hidden md:block absolute top-1/2 -right-2 w-4 h-4 bg-[#0A0A0C] border-t border-r border-white/5 rotate-45 -translate-y-1/2 group-hover:border-white/20 transition-colors"></div>
+                            <h3 class="text-2xl font-semibold text-white tracking-tight font-oswald mb-3">Fernandez Com. de Medicamentos S/A</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed font-sans font-light">Gerenciamento de projetos de infraestrutura, buscando criar soluções relacionadas a tecnologia. Administração da equipe de suporte de TI, infraestrutura software, hardwares e telecomunicações. Acompanhamento de indicadores e de desempenho de 56 filiais. Estrategista de venda comercial. Integração de campanhas de marketing.</p>
+                        </div>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 top-8 md:top-1/2 md:-translate-y-1/2 flex items-center justify-center w-14 h-14 rounded-full bg-[#050505] border-2 border-white/10 z-10 group-hover:border-blue-500 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-500">
+                        <span class="text-xs font-mono text-blue-400 font-bold group-hover:scale-110 transition-transform">2018</span>
+                    </div>
+                    <div class="w-full md:w-[45%] order-3 hidden md:block"></div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="relative flex flex-col md:flex-row justify-between items-center w-full mb-16 group scroll-animate">
+                    <div class="w-full md:w-[45%] order-1 hidden md:block"></div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 top-8 md:top-1/2 md:-translate-y-1/2 flex items-center justify-center w-14 h-14 rounded-full bg-[#050505] border-2 border-white/10 z-10 group-hover:border-blue-500 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-500">
+                        <span class="text-xs font-mono text-blue-400 font-bold group-hover:scale-110 transition-transform">2023</span>
+                    </div>
+                    <div class="w-full md:w-[45%] order-2 pl-16 md:pl-12 text-left">
+                        <div class="glass-card p-8 rounded-2xl border border-white/5 group-hover:border-white/20 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/10 relative">
+                            <div class="hidden md:block absolute top-1/2 -left-2 w-4 h-4 bg-[#0A0A0C] border-b border-l border-white/5 rotate-45 -translate-y-1/2 group-hover:border-white/20 transition-colors"></div>
+                            <h3 class="text-2xl font-semibold text-white tracking-tight font-oswald mb-3">Sicredi Planalto RS/MG</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed font-sans font-light">Prospecção de Parceiros de Negócios PJ - Veículos | Energia Solar | CDC | Construção e Reforma | Mobilidade Elétrica | Móveis e Decoração | Eletroeletrônicos | Acessibilidade | Visitas de relacionamento presencial nos parceiros e análise de indicadores de evolução de negócios. Analista de dados no time de crédito, decisões em tempo real, cultura orientada a evidência.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Animação de entrada dos cards (Fade & Slide)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animação da barra de progresso (Scroll)
+        const timeline = document.getElementById('timeline-container');
+        const progressLine = document.getElementById('timeline-progress');
+
+        if (timeline && progressLine) {
+            window.addEventListener('scroll', () => {
+                const timelineRect = timeline.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                
+                const startPoint = windowHeight * 0.8; 
+                let progress = 0;
+
+                if (timelineRect.top < startPoint) {
+                    const totalScrollable = timelineRect.height;
+                    const scrolled = startPoint - timelineRect.top;
+                    progress = (scrolled / totalScrollable) * 100;
+                    
+                    if (progress > 100) progress = 100;
+                    if (progress < 0) progress = 0;
+                }
+
+                progressLine.style.height = `${progress}%`;
+            });
+        }
+    </script>
 </body>
 </html>
