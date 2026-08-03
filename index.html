@@ -130,6 +130,13 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
             pointer-events: none;
         }
+
+        /* Portfolio Grid Background */
+        .bg-grid {
+            background-size: 60px 60px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-blue-500 selection:text-black text-white bg-[#000000]">
@@ -331,6 +338,93 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Projetos / Portfólio -->
+    <section id="portfolio" class="relative w-full bg-[#030303] py-32 px-6 flex flex-col items-center z-20 overflow-hidden border-t border-white/5">
+        <!-- Fundo diferenciado: Grid escuro com brilho suave -->
+        <div class="absolute inset-0 bg-grid opacity-50 pointer-events-none"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-brand-purple/10 blur-[150px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-6xl w-full mx-auto relative z-10">
+            <!-- Headline -->
+            <div class="text-center mb-20 scroll-animate">
+                <span class="text-xs font-mono text-brand-purple uppercase tracking-widest mb-4 block">Portfólio</span>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl text-white font-oswald font-light tracking-tight leading-[1.2]">
+                    Projetos que eu <br/>
+                    <span class="text-brand-purple font-medium">já criei.</span>
+                </h2>
+            </div>
+
+            <!-- Grid de Projetos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                
+                <!-- Projeto 1 -->
+                <div class="glass-card rounded-3xl border border-white/5 overflow-hidden group hover:border-brand-purple/30 transition-colors duration-500 scroll-animate flex flex-col">
+                    <div class="w-full h-64 overflow-hidden relative shrink-0">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Dashboard de Performance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-[#0A0A0C]/50 to-transparent opacity-90"></div>
+                    </div>
+                    <div class="p-8 relative flex-1 flex flex-col bg-[#0A0A0C]">
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-[10px] text-gray-400 font-mono tracking-widest uppercase">2021</span>
+                            <span class="px-2.5 py-1 rounded bg-brand-green/10 border border-brand-green/20 text-[10px] text-brand-green font-mono tracking-widest uppercase">Fernandez Com. Medicamentos</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white tracking-tight font-oswald mb-3">Dashboard de Performance Comercial</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed font-sans font-light">Centralizou métricas de vendas e inadimplência em um painel único.</p>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="glass-card rounded-3xl border border-white/5 overflow-hidden group hover:border-brand-purple/30 transition-colors duration-500 scroll-animate delay-100 flex flex-col">
+                    <div class="w-full h-64 overflow-hidden relative shrink-0">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Análise de Churn" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-[#0A0A0C]/50 to-transparent opacity-90"></div>
+                    </div>
+                    <div class="p-8 relative flex-1 flex flex-col bg-[#0A0A0C]">
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-[10px] text-gray-400 font-mono tracking-widest uppercase">2023</span>
+                            <span class="px-2.5 py-1 rounded bg-brand-green/10 border border-brand-green/20 text-[10px] text-brand-green font-mono tracking-widest uppercase">Sicredi Planalto RS/MG</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white tracking-tight font-oswald mb-3">Análise de Churn de Clientes</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed font-sans font-light">Identificou os principais fatores de cancelamento de produtos em uma base de 100 mil usuários.</p>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="glass-card rounded-3xl border border-white/5 overflow-hidden group hover:border-brand-purple/30 transition-colors duration-500 scroll-animate flex flex-col">
+                    <div class="w-full h-64 overflow-hidden relative shrink-0">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800" alt="Segmentação de Usuários" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-[#0A0A0C]/50 to-transparent opacity-90"></div>
+                    </div>
+                    <div class="p-8 relative flex-1 flex flex-col bg-[#0A0A0C]">
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-[10px] text-gray-400 font-mono tracking-widest uppercase">2025</span>
+                            <span class="px-2.5 py-1 rounded bg-brand-green/10 border border-brand-green/20 text-[10px] text-brand-green font-mono tracking-widest uppercase">Sicredi Planalto RS/MG</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white tracking-tight font-oswald mb-3">Modelo de Segmentação de Usuários</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed font-sans font-light">Criou clusters de hábitos comportamentais de compra para personalização de produtos.</p>
+                    </div>
+                </div>
+
+                <!-- Projeto 4 -->
+                <div class="glass-card rounded-3xl border border-white/5 overflow-hidden group hover:border-brand-purple/30 transition-colors duration-500 scroll-animate delay-100 flex flex-col">
+                    <div class="w-full h-64 overflow-hidden relative shrink-0">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800" alt="Landing Page Amauri Vidros" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-[#0A0A0C]/50 to-transparent opacity-90"></div>
+                    </div>
+                    <div class="p-8 relative flex-1 flex flex-col bg-[#0A0A0C]">
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-[10px] text-gray-400 font-mono tracking-widest uppercase">2026</span>
+                            <span class="px-2.5 py-1 rounded bg-blue-500/10 border border-blue-500/20 text-[10px] text-blue-400 font-mono tracking-widest uppercase">Freelancer de Design</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white tracking-tight font-oswald mb-3">Landing Page Empresa Amauri Vidros</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed font-sans font-light">Transformar visitantes em clientes ou contatos.</p>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
