@@ -63,17 +63,29 @@
             -webkit-backdrop-filter: blur(12px);
         }
         
-        .scroll-animate {
+        /* Classe dobrada de proposito: eleva a especificidade para vencer as
+           utilities do Tailwind (transition-colors / duration-*) usadas nos
+           mesmos elementos, que senao sobrescrevem o transition-property daqui. */
+        .scroll-animate.scroll-animate {
             opacity: 0;
             transform: translateY(40px);
-            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition-property: opacity, transform, border-color;
+            transition-duration: 0.8s;
+            transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         
         .scroll-animate.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
+        /* .delay-* controla animation-delay (usado por .scroll-item).
+           .scroll-animate anima via transition, entao precisa de transition-delay. */
+        .scroll-animate.delay-100 { transition-delay: 100ms; }
+        .scroll-animate.delay-200 { transition-delay: 200ms; }
+        .scroll-animate.delay-300 { transition-delay: 300ms; }
+        .scroll-animate.delay-500 { transition-delay: 500ms; }
+
         [style*="--border-gradient"]::before {
             content: "";
             position: absolute;
